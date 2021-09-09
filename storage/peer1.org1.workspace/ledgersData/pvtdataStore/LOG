@@ -1,0 +1,35 @@
+=============== Aug 25, 2021 (UTC) ===============
+13:26:04.195098 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+13:26:04.419235 db@open opening
+13:26:04.419772 version@stat F·[] S·0B[] Sc·[]
+13:26:04.551959 db@janitor F·2 G·0
+13:26:04.552012 db@open done T·132.718081ms
+=============== Aug 31, 2021 (UTC) ===============
+14:44:43.619974 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+14:44:43.696028 version@stat F·[] S·0B[] Sc·[]
+14:44:43.696095 db@open opening
+14:44:43.696161 journal@recovery F·1
+14:44:43.696879 journal@recovery recovering @1
+14:44:44.102991 memdb@flush created L0@2 N·8812 S·74KiB "wor..e\x00\x01,v8812":"wor..e\x00\a,d1"
+14:44:44.104592 version@stat F·[1] S·74KiB[74KiB] Sc·[0.25]
+14:44:44.415583 db@janitor F·3 G·0
+14:44:44.415643 db@open done T·719.537185ms
+=============== Aug 31, 2021 (UTC) ===============
+14:52:50.082168 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+14:52:50.082395 version@stat F·[1] S·74KiB[74KiB] Sc·[0.25]
+14:52:50.082434 db@open opening
+14:52:50.082530 journal@recovery F·1
+14:52:50.083356 journal@recovery recovering @3
+14:52:50.177662 memdb@flush created L0@5 N·1 S·126B "wor..e\x00\a,d8814":"wor..e\x00\a,d8814"
+14:52:50.178579 version@stat F·[2] S·74KiB[74KiB] Sc·[0.50]
+14:52:50.656224 db@janitor F·4 G·0
+14:52:50.656260 db@open done T·573.813943ms
+=============== Aug 31, 2021 (UTC) ===============
+14:53:17.220059 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+14:53:17.220290 version@stat F·[2] S·74KiB[74KiB] Sc·[0.50]
+14:53:17.220329 db@open opening
+14:53:17.220425 journal@recovery F·1
+14:53:17.221206 journal@recovery recovering @6
+14:53:17.223348 version@stat F·[2] S·74KiB[74KiB] Sc·[0.50]
+14:53:17.823188 db@janitor F·4 G·0
+14:53:17.823229 db@open done T·602.887395ms

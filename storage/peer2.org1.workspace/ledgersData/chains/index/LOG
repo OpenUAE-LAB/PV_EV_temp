@@ -1,0 +1,36 @@
+=============== Aug 25, 2021 (UTC) ===============
+13:26:06.292990 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+13:26:06.425735 db@open opening
+13:26:06.427436 version@stat F·[] S·0B[] Sc·[]
+13:26:06.797306 db@janitor F·2 G·0
+13:26:06.800268 db@open done T·374.505004ms
+=============== Aug 31, 2021 (UTC) ===============
+14:44:42.387930 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+14:44:42.430202 version@stat F·[] S·0B[] Sc·[]
+14:44:42.430435 db@open opening
+14:44:42.430534 journal@recovery F·1
+14:44:42.430733 journal@recovery recovering @1
+14:44:43.185802 memdb@flush created L0@2 N·52832 S·1MiB "_\x00f,v1":"wor..\x01\x12\x00,v114"
+14:44:43.186636 version@stat F·[1] S·1MiB[1MiB] Sc·[0.25]
+14:44:43.571430 db@janitor F·3 G·0
+14:44:43.571491 db@open done T·1.141042232s
+=============== Aug 31, 2021 (UTC) ===============
+14:52:47.836572 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+14:52:47.836804 version@stat F·[1] S·1MiB[1MiB] Sc·[0.25]
+14:52:47.836846 db@open opening
+14:52:47.836945 journal@recovery F·1
+14:52:47.837778 journal@recovery recovering @3
+14:52:47.921733 memdb@flush created L0@5 N·1 S·141B "wor..nfo,v52834":"wor..nfo,v52834"
+14:52:47.923896 version@stat F·[2] S·1MiB[1MiB] Sc·[0.50]
+14:52:48.096489 db@janitor F·4 G·0
+14:52:48.096526 db@open done T·259.66948ms
+=============== Aug 31, 2021 (UTC) ===============
+14:53:15.683123 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+14:53:15.683296 version@stat F·[2] S·1MiB[1MiB] Sc·[0.50]
+14:53:15.683315 db@open opening
+14:53:15.683385 journal@recovery F·1
+14:53:15.689062 journal@recovery recovering @6
+14:53:15.875083 memdb@flush created L0@8 N·1 S·141B "wor..nfo,v52836":"wor..nfo,v52836"
+14:53:15.875816 version@stat F·[3] S·1MiB[1MiB] Sc·[0.75]
+14:53:16.433202 db@janitor F·5 G·0
+14:53:16.433261 db@open done T·749.936759ms

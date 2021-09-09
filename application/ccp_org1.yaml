@@ -1,0 +1,99 @@
+---
+name: test-network-org1
+#x-type: "hlfv1"
+#description: "connection profile for 2.1  network"
+version: "1.0.0"
+
+channels:
+  workspace:
+    orderers:
+      - orderer1.workspace
+      - orderer2.workspace
+      - orderer3.workspace
+    peers:
+      peer1.org1.workspace:
+        endorsingPeer: true
+        chaincodeQuery: true
+        ledgerQuery: true
+        eventSource: true
+        discover: true
+
+      peer2.org1.workspace:
+        endorsingPeer: true
+        chaincodeQuery: false
+        ledgerQuery: true
+        eventSource: false
+    
+  
+organizations:
+  org1:
+    mspid: Org1MSP
+    peers:
+      - peer1.org1.workspace
+      - peer2.org1.workspace
+    certificateAuthorities:
+      - ca1
+    adminPrivateKey:
+      path:   /home/openuae/Downloads/hlf/crypto-config/peerOrganizations/org1.workspace/users/Admin@org1.workspace/msp/keystore/priv_sk
+    signedCert:
+      path:   /home/openuae/Downloads/hlf/crypto-config/peerOrganizations/org1.workspace/users/Admin@org1.workspace/msp/signcerts/Admin@org1.workspace-cert.pem
+
+orderers:
+  orderer1.workspace:
+    url: grpcs://localhost:7050
+    grpcOptions:
+      ssl-target-name-override: orderer1.workspace
+      grpc-max-send-message-length: 4194304
+    tlsCACerts:
+      path: /home/openuae/Downloads/hlf/crypto-config/ordererOrganizations/workspace/orderers/orderer1.workspace/msp/tlscacerts/tlsca.workspace-cert.pem
+                     
+  orderer2.workspace:
+    url: grpcs://localhost:8050
+    grpcOptions:
+      ssl-target-name-override: orderer2.workspace
+      grpc-max-send-message-length: 4194304
+    tlsCACerts:
+      path: /home/openuae/Downloads/hlf/crypto-config/ordererOrganizations/workspace/orderers/orderer2.workspace/msp/tlscacerts/tlsca.workspace-cert.pem
+  
+  orderer3.workspace:
+    url: grpcs://localhost:9050
+    grpcOptions:
+      ssl-target-name-override: orderer3.workspace
+      grpc-max-send-message-length: 4194304
+    tlsCACerts:
+      path:  /home/openuae/Downloads/hlf/crypto-config/ordererOrganizations/workspace/orderers/orderer3.workspace/msp/tlscacerts/tlsca.workspace-cert.pem
+     
+           
+peers:
+  peer1.org1.workspace:
+    url: grpcs://localhost:7051
+    grpcOptions:
+      ssl-target-name-override: peer1.org1.workspace
+      grpc.keepalive_time_ms: 600000
+    tlsCACerts:
+      path:  /home/openuae/Downloads/hlf/crypto-config/peerOrganizations/org1.workspace/peers/peer1.org1.workspace/msp/tlscacerts/tlsca.org1.workspace-cert.pem
+  
+  peer2.org1.workspace:
+    url: grpcs://localhost:8051
+    grpcOptions:
+      ssl-target-name-override: peer2.org1.workspace
+    #tlsRootCertFiles:
+    #  path:  /home/openuae/Downloads/hlf/crypto-config/peerOrganizations/org1.workspace/peers/peer2.org1.workspace/tls/ca.crt
+    tlsCACerts:
+      path:   /home/openuae/Downloads/hlf/crypto-config/peerOrganizations/org1.workspace/peers/peer2.org1.workspace/msp/tlscacerts/tlsca.org1.workspace-cert.pem
+    
+    
+     
+  
+certificateAuthorities:
+  ca1:
+    url: https://localhost:7054
+    httpOptions:
+      verify: false
+    tlsCACerts:
+      path: /home/openuae/Downloads/hlf/crypto-config/peerOrganizations/org1.workspace/ca/ca.org1.workspace-cert.pem
+    registrar:
+      - enrollId: admin
+        enrollSecret: adminpw
+    caName: ca1
+    

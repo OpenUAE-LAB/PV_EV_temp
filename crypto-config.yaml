@@ -1,0 +1,44 @@
+# Copyright IBM Corp. All Rights Reserved.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+OrdererOrgs:
+
+  - Name: Orderer
+    Domain: workspace
+    EnableNodeOUs: true
+    Template:
+      Start: 1
+      Count: 3
+      
+
+
+PeerOrgs:
+  - Name: or1
+    Domain: org1.workspace
+    EnableNodeOUs: true
+    Specs:
+      - Hostname: peer1
+        CommonName: peer1.org1.workspace
+      - Hostname: peer2
+        CommonName: peer2.org1.workspace
+    Template:
+      Start: 1
+      Count: 2
+    Users:
+      Count: 1      
+
+  - Name: org2
+    Domain: org2.workspace
+    EnableNodeOUs: true
+    Specs:
+      - Hostname: peer1
+        CommonName: peer1.org2.workspace
+      - Hostname: peer2
+        CommonName: peer2.org2.workspace
+    Template:
+      Start: 1
+      Count: 2
+    Users:
+      Count: 1
