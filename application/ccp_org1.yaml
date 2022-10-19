@@ -2,7 +2,9 @@
 name: test-network-org1
 #x-type: "hlfv1"
 #description: "connection profile for 2.1  network"
+#/home/openuae/Documents/PV_EV_temp/crypto-config
 version: "1.0.0"
+
 
 channels:
   workspace:
@@ -34,9 +36,9 @@ organizations:
     certificateAuthorities:
       - ca1
     adminPrivateKey:
-      path:   /home/openuae/Downloads/hlf/crypto-config/peerOrganizations/org1.workspace/users/Admin@org1.workspace/msp/keystore/priv_sk
+      path:   /home/openuae/Documents/PV_EV_temp/crypto-config/peerOrganizations/org1.workspace/users/Admin@org1.workspace/msp/keystore/priv_sk
     signedCert:
-      path:   /home/openuae/Downloads/hlf/crypto-config/peerOrganizations/org1.workspace/users/Admin@org1.workspace/msp/signcerts/Admin@org1.workspace-cert.pem
+      path:   /home/openuae/Documents/PV_EV_temp/crypto-config/peerOrganizations/org1.workspace/users/Admin@org1.workspace/msp/signcerts/Admin@org1.workspace-cert.pem
 
 orderers:
   orderer1.workspace:
@@ -45,7 +47,7 @@ orderers:
       ssl-target-name-override: orderer1.workspace
       grpc-max-send-message-length: 4194304
     tlsCACerts:
-      path: /home/openuae/Downloads/hlf/crypto-config/ordererOrganizations/workspace/orderers/orderer1.workspace/msp/tlscacerts/tlsca.workspace-cert.pem
+      path: /home/openuae/Documents/PV_EV_temp/crypto-config/ordererOrganizations/workspace/orderers/orderer1.workspace/msp/tlscacerts/tlsca.workspace-cert.pem
                      
   orderer2.workspace:
     url: grpcs://localhost:8050
@@ -53,7 +55,7 @@ orderers:
       ssl-target-name-override: orderer2.workspace
       grpc-max-send-message-length: 4194304
     tlsCACerts:
-      path: /home/openuae/Downloads/hlf/crypto-config/ordererOrganizations/workspace/orderers/orderer2.workspace/msp/tlscacerts/tlsca.workspace-cert.pem
+      path: /home/openuae/Documents/PV_EV_temp/crypto-config/ordererOrganizations/workspace/orderers/orderer2.workspace/msp/tlscacerts/tlsca.workspace-cert.pem
   
   orderer3.workspace:
     url: grpcs://localhost:9050
@@ -61,7 +63,7 @@ orderers:
       ssl-target-name-override: orderer3.workspace
       grpc-max-send-message-length: 4194304
     tlsCACerts:
-      path:  /home/openuae/Downloads/hlf/crypto-config/ordererOrganizations/workspace/orderers/orderer3.workspace/msp/tlscacerts/tlsca.workspace-cert.pem
+      path:  /home/openuae/Documents/PV_EV_temp/crypto-config/ordererOrganizations/workspace/orderers/orderer3.workspace/msp/tlscacerts/tlsca.workspace-cert.pem
      
            
 peers:
@@ -71,7 +73,7 @@ peers:
       ssl-target-name-override: peer1.org1.workspace
       grpc.keepalive_time_ms: 600000
     tlsCACerts:
-      path:  /home/openuae/Downloads/hlf/crypto-config/peerOrganizations/org1.workspace/peers/peer1.org1.workspace/msp/tlscacerts/tlsca.org1.workspace-cert.pem
+      path:  /home/openuae/Documents/PV_EV_temp/crypto-config/peerOrganizations/org1.workspace/peers/peer1.org1.workspace/msp/tlscacerts/tlsca.org1.workspace-cert.pem
   
   peer2.org1.workspace:
     url: grpcs://localhost:8051
@@ -80,7 +82,7 @@ peers:
     #tlsRootCertFiles:
     #  path:  /home/openuae/Downloads/hlf/crypto-config/peerOrganizations/org1.workspace/peers/peer2.org1.workspace/tls/ca.crt
     tlsCACerts:
-      path:   /home/openuae/Downloads/hlf/crypto-config/peerOrganizations/org1.workspace/peers/peer2.org1.workspace/msp/tlscacerts/tlsca.org1.workspace-cert.pem
+      path:   /home/openuae/Documents/PV_EV_temp/crypto-config/peerOrganizations/org1.workspace/peers/peer2.org1.workspace/msp/tlscacerts/tlsca.org1.workspace-cert.pem
     
     
      
@@ -91,7 +93,7 @@ certificateAuthorities:
     httpOptions:
       verify: false
     tlsCACerts:
-      path: /home/openuae/Downloads/hlf/crypto-config/peerOrganizations/org1.workspace/ca/ca.org1.workspace-cert.pem
+      path: /home/openuae/Documents/PV_EV_temp/crypto-config/peerOrganizations/org1.workspace/ca/ca.org1.workspace-cert.pem
     registrar:
       - enrollId: admin
         enrollSecret: adminpw

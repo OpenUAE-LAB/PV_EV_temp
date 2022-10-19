@@ -1,4 +1,4 @@
 Installed chaincodes on peer:
-Package ID: invoice_1.0:7f998a9ee3e8cf2e233d791b1535a81f35dc442d6504f1275da37115b87703db, Label: invoice_1.0
-Package ID: production_1.0:d1b0011ce78ccda6c21714f2c4be525f9f7ab489ccb1deeb38c6dec1c2de7890, Label: production_1.0
-Package ID: consumption_1.0:f81b05451daf737b4f30ca933fbd31ede721180a186e0b4043ed6b92f3e3043c, Label: consumption_1.0
+Package ID: consumption_1.0:4bd7b067dccd9be02d8e7f0d053a169f8d016239f31bb8b02633e6d5380f0173, Label: consumption_1.0
+Package ID: invoice_1.0:b535bce713ce217e1fc56a260b0016fe130303314707eb685166067c1acd0513, Label: invoice_1.0
+Package ID: production_1.0:bff236916c45e12dbc00455a096ae53af6f3e1bcbfefabdfcb180c75a0c69159, Label: production_1.0

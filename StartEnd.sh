@@ -1,24 +1,6 @@
-# docker stop $(docker ps -a -q)
-# docker rm -f $(docker ps -aq)
-# docker rmi -f $(docker images -q)
-# docker system prune -a 
-# docker system prune -a
-# docker network prune
+### FOR A START OVER
 
-
-#temp change
-docker stop $(docker ps -a -q)
-
-
-export COMPOSE_PROJECT_NAME=net
-export IMAGE_TAG=latest
-export SYS_CHANNEL=workspace-sys-channel
-
-docker-compose -f docker-compose.yaml -f docker-compose-couch.yaml up -d
-
-
-
-
+## For a complete start over, stop and remove all the dockers, and clear up the network
 
 docker stop $(docker ps -a -q)  ; docker rm -f $(docker ps -aq) ; 
 docker system prune -a ; docker volume prune ; docker volume ls; docker network prune
@@ -198,3 +180,21 @@ node addToWallet.js
 
 cd ../AApi
 node pv_api.js
+
+
+
+
+
+
+### FOR EDIT
+
+#In case you would like to stop the dockers to do some changes in configurations
+#you needed to stop the docker -> do the changes -> load the env variable -> then run the docker-compose again
+docker stop $(docker ps -a -q)
+
+
+export COMPOSE_PROJECT_NAME=net
+export IMAGE_TAG=latest
+export SYS_CHANNEL=workspace-sys-channel
+
+docker-compose -f docker-compose.yaml -f docker-compose-couch.yaml up -d

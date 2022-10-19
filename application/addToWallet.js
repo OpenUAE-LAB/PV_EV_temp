@@ -11,7 +11,7 @@ const fs = require('fs');
 const { Wallets } = require('fabric-network');
 const path = require('path');
 
-const fixtures = '/home/openuae/Downloads/hlf/crypto-config'; //TO DO: To make the path relative
+const fixtures = '/home/openuae/Documents/PV_EV_temp/crypto-config'; //TO DO: To make the path relative
 
 async function main() {
 

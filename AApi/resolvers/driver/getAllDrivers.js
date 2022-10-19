@@ -2,36 +2,37 @@ const db = require("../../models");
 const User=  db.user;
 const Role=  db.role;
 
-
 const getAllDrivers = async() =>{
-    return await Role.find({ name: ['ev-driver', 'ext-driver']},
-        (err, roles) => {
-            if (err) {
-                console.log("[getAllDrivers]: Err: ", err);
-                return ([false,err]);
-            };
-        
-            evDriverID = roles.map(role => role._id);
-            user.find(
-                { "$or": [
-                    { "roles": [evDriverID[0]] },
-                    { "roles": [ evDriverID[1]] }
-                ]}      
-            , { username: 1, email: 1, active:1, roles:1 })
-            .populate('roles')
-            .then(documents => {
-                return ([true,documents]);
-            })
-            .catch(err => {
-                console.log("[getAllDrivers]: Err: ", err);
-                return ([false,err]);
-            })
+
+    const evDriverNames = ['ev-driver', 'ext-driver'];
+    const pipeline =    [
+        { "$unwind": "$roles" },
+        { "$lookup":
+           {
+             from: "roles",
+             localField: 'roles',
+             foreignField: '_id',
+             as: 'roleDetails'
+           }
+         },
+         {
+            "$match": {
+                'roleDetails.name':{
+                    "$in":evDriverNames
+                }
+            }
+         },
+         {'$project':{ username: 1, email: 1, active:1, roleDetails:1 }
         }
+    ]
 
-    );
+    return await User.aggregate(pipeline)
+    .then(documents => {
+        return ([true,documents]);
+    })
+    .catch(err => {
+        return ([false,err]);
+    })
 }
-
 module.exports = getAllDrivers;
-
-
 
